@@ -52,6 +52,8 @@ class Students extends Component
 
         $this->hidemodal();
 
+        session()->flash('info', $this->studentId ? 'Student Update Successfully' : 'Student Create SuccessFully' );
+
         $this->nis = '';
         $this->nama = '';
         $this->jk = '';
@@ -77,5 +79,9 @@ class Students extends Component
         $this->jurusan = $student->jurusan;
 
         $this->showModal();
+    }
+
+    public function delete($id){
+        Student::find($id)->delete();
     }
 }

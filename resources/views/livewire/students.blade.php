@@ -15,6 +15,14 @@
             @if($isOpen)
                 @include('livewire.create')
             @endif
+
+            @if(session()->has('info'))
+            <div class="bg-green-300 border-2 border-green-500 rounded-b mb-2 ty-3 px-3">
+                <div>
+                    <h1 class="text-white font-bold">{{ session('info') }}</h1>
+                </div>
+            </div>
+            @endif
             <table class="table-fixed w-full">
                 <thead class="bg-gray-500">
                     <tr>

@@ -15,6 +15,14 @@
             <?php if($isOpen): ?>
                 <?php echo $__env->make('livewire.create', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
             <?php endif; ?>
+
+            <?php if(session()->has('info')): ?>
+            <div class="bg-green-300 border-t-4 border-green-500 rounded-b">
+                <div>
+                    <h1 class="text-white font-bold"><?php echo e(session('info')); ?></h1>
+                </div>
+            </div>
+            <?php endif; ?>
             <table class="table-fixed w-full">
                 <thead class="bg-gray-500">
                     <tr>
@@ -80,4 +88,4 @@
             </div>
     
 </div>
-<?php /**PATH E:\xampp\htdocs\PPDB\resou
+<?php /**PATH E:\xampp\htdocs\PPDB\resources\views/livewire/students.blade.php ENDPATH**/ ?>
